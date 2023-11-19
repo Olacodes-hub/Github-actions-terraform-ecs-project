@@ -147,14 +147,14 @@ jobs:
     needs: 
       - configure_aws_credentials
       - deploy_aws_infrastructure
-    if: needs.deploy_aws_infrastructure.outputs.terraform_action != 'destroy'
+    if: 
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repository
         uses: actions/checkout@v3
 
       - name: Check if ECR repository exists
-        env: 
+        env:
           IMAGE_NAME: ${{ needs.deploy_aws_infrastructure.outputs.image_name }}
         run: |
           result=$(aws ecr describe-repositories --repository-names "${{ env.IMAGE_NAME }}" | jq -r '.repositories[0].repositoryName')
