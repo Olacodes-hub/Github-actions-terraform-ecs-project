@@ -1,9 +1,8 @@
 # Github-actions-terraform-ecs-project
-# Dynamic Website Deployment on AWS using Terraform and Docker
 
 ## Overview
 
-This project demonstrates the deployment of a dynamic web application on Amazon Web Services (AWS) using Terraform and Docker. The infrastructure is set up using Terraform to create a scalable, fault-tolerant, and highly available environment. The application is then deployed on an Amazon ECS (Elastic Container Service) cluster using Docker containers.
+This CiCd pipeline project demonstrates the deployment of a dynamic web application on Amazon Web Services (AWS) using Terraform and Docker. The infrastructure is set up using Terraform to create a scalable, fault-tolerant, and highly available environment. The application is then deployed on an Amazon ECS (Elastic Container Service) cluster using Docker containers.
 
 ## Infrastructure Components
 
@@ -679,6 +678,8 @@ jobs:
    - Manage your ECS cluster by navigating to the ECS service in the AWS Management Console.
    Monitor and adjust the number of tasks running in the ECS cluster based on demand.
    Update or create new task definitions to accommodate changes or improvements to your Docker containers.
+8. Important!
+   Remember to set up the necessary secrets in your GitHub repository for sensitive information such as AWS credentials, personal access tokens, and Docker registry credentials.          Additionally, ensure that IAM roles and permissions are appropriately configured for the AWS resources and actions performed in the workflow.
 
 ## Contributors
 
