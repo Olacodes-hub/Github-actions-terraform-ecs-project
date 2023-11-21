@@ -632,13 +632,7 @@ jobs:
 2. **Configure AWS CLI:**
    - Ensure that the AWS CLI is configured with the necessary access and secret keys.
 
-3. **Run the Deployment Script:**
-   - Execute the provided deployment script on your ECS instances.
-
-4. **Run Data Migration Script:**
-   - Execute the provided data migration script to set up the database.
-
-5. **CiCd Pipeline Workflow:**
+3. **CiCd Pipeline Workflow:**
 * 		Configure AWS Credentials:
     * Configures AWS credentials using aws-actions/configure-aws-credentials.
 * 		Deploy AWS Infrastructure:
@@ -670,15 +664,15 @@ jobs:
 *  * Updates the ECS service with the new task definition revision.
    * Waits for the ECS service to become stable.
 
-6. **Access the Website:**
+4. **Access the Website:**
    - Once the deployment is complete, access the website using the provided domain name.
      
-7. **Manage ECS Cluster and Task Definitions:
+5. **Manage ECS Cluster and Task Definitions:
 
    - Manage your ECS cluster by navigating to the ECS service in the AWS Management Console.
    Monitor and adjust the number of tasks running in the ECS cluster based on demand.
    Update or create new task definitions to accommodate changes or improvements to your Docker containers.
-8. Important!
+6. Important!
    Remember to set up the necessary secrets in your GitHub repository for sensitive information such as AWS credentials, personal access tokens, and Docker registry credentials.          Additionally, ensure that IAM roles and permissions are appropriately configured for the AWS resources and actions performed in the workflow.
 
 ## Contributors
